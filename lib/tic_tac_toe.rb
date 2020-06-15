@@ -44,14 +44,12 @@ end
 turns 
 end 
 
-
-
-def play(board)
-  counter = 0 
-  while counter < 9 
-  turn(board)
-  counter += 1
-  end 
+def current_player(board)
+  if turn_count(board) % 2 == 0
+    "X"
+  else 
+    "O"
+  end
 end 
 
 WIN_COMBINATIONS = [
@@ -64,3 +62,4 @@ WIN_COMBINATIONS = [
   [0, 4, 8],
   [6, 4, 2]
 ]
+
