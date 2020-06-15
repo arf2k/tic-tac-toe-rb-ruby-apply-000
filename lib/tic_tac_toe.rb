@@ -34,6 +34,18 @@ def turn(board)
   end
 end
 
+def turn_count(board)
+  turns = 0 
+  board.each do |marker|
+  if marker == "X" || marker == "O"
+      turns += 1 
+  end
+end 
+turns 
+end 
+
+
+
 def play(board)
   counter = 0 
   while counter < 9 
