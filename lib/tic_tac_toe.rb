@@ -79,3 +79,15 @@ def won?(board)
   end
   return false
 end
+
+def full?(board)
+  board.all?{|token| token == "X" || token == "O"}
+end
+
+def draw?(board)
+  full?(board) && !won?(board)
+end
+
+def over?(board)
+  full?(board) && !won?(board) || full?(board) || won?(board)
+end 
